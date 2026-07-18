@@ -1,0 +1,547 @@
+h1 {
+    font-size: clamp(54px, 7vw, 90px);
+    color: white;
+    font-family: "Imperial Script", cursive;
+    font-weight: 400;
+    font-style: normal;
+    line-height: 0.95;
+    margin: 0;
+}
+h2 {
+    font-size: clamp(34px, 4vw, 50px);
+    color: black;
+    padding: 10px;
+}
+h3 {
+    font-size: clamp(27px, 3vw, 35px);
+}
+h4 {
+    font-size: clamp(23px, 2.5vw, 30px);
+}
+
+body {
+    background-color: #F4F1EB;
+    text-align: center;
+    margin: 0;
+    overflow-x: hidden;
+}
+
+#home {
+    background-image: linear-gradient(
+            rgba(0, 0, 0, 0.5),
+            rgba(0, 0, 0, 0.5)
+        ),
+        url('images/schilderijen2.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-height: 650px;
+    font-size: 35px;
+    color: white;
+    font-family: "Yuyu", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    margin: 0;
+}
+
+#home h2 {
+    color: white;
+    margin: 0;
+    padding: 30px;
+}
+
+.text-home {
+    box-sizing: border-box;
+    margin: 0 auto;
+    max-width: 700px;
+    padding: 25px;
+    width: 100%;
+}
+
+header {
+    background-color: #6495ed;
+    font-size: 30px;
+    color: white;
+    text-align: center;
+    margin-bottom: 0px;
+    min-height: 200px;
+    padding: 48px 110px;
+    position: relative;
+}
+
+.dropdown {
+    display: none;
+}
+
+.dropdown.open {
+    display: block;
+    font-size: 30px;
+    color: black;
+    z-index: 1000;
+}
+
+.dropdown p {
+    margin: 12px 0;
+}
+
+.dropdown.open a {
+    color: white;
+}
+
+header a {
+    color: white;
+}
+
+#gallery {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    height: 2000px;
+}
+
+.gallery-container {
+    position: relative;
+    height: 1800px;
+    margin: 0 auto;
+    max-width: 1440px;
+}
+
+.gallery-container > div {
+    position: absolute;
+    width: 40%;
+}
+
+#gallery img {
+    display: block;
+    height: 600px;
+    margin: 0 auto;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+#gallery img:hover {
+    transform: scale(1.05);
+    transition: transform 0.3s ease;
+}
+
+#gallery p {
+    width: 100%;
+    margin: 5px 0 0;
+    font-size: 20px;
+}
+
+.art-piece1,
+.art-piece2 {
+    top: 0;
+}
+
+.art-piece1,
+.art-piece3 {
+    left: 8%;
+}
+
+.art-piece2,
+.art-piece4 {
+    right: 8%;
+}
+
+.art-piece3,
+.art-piece4 {
+    top: 900px;
+}
+
+.gallery-container h4 {
+    margin-bottom: 10px;
+}
+
+#about-text {
+    font-size: 30px;
+    width: 70%;
+    font-family: 'Times New Roman', Times, serif;
+    margin-left: 210px;
+    transition: 
+}
+
+#gallery h2 {
+    color: black;
+}
+
+
+#contact {
+    background-color: #171717;
+    margin: 0;
+    display: flow-root;
+
+
+}
+#contact-text {
+    font-size: 25px;
+    color: white;
+}
+
+#rights {
+    color: lightgray;
+    font-size: 16px;
+    padding: 20px;
+}
+
+#contact h2 {
+    color: white;
+}
+
+#burger-menu {
+    position: absolute;
+    right: clamp(24px, 5vw, 72px);
+    top: 50%;
+    transform: translateY(-50%);
+    padding: 0;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+}
+
+#burger-menu img {
+    display: block;
+    height: 40px;
+    object-fit: cover;
+}
+
+#face-image {
+    position: absolute;
+    left: clamp(28px, 10vw, 230px);
+    top: 50%;
+    transform: translateY(-50%);
+    height: clamp(78px, 8vw, 120px);
+    object-fit: cover;
+}
+
+#face-image2 {
+    position: absolute;
+    right: clamp(120px, 16vw, 230px);
+    top: 50%;
+    transform: translateY(-50%);
+    height: clamp(78px, 8vw, 120px);
+    object-fit: cover;
+}
+
+/* Shop-only redesign */
+#shop {
+    --shop-ink: #171717;
+    --shop-paper: #f7f1e7;
+    --shop-accent: #d9543d;
+    background:
+        radial-gradient(circle at 8% 8%, rgba(217, 84, 61, 0.24), transparent 25%),
+        var(--shop-ink);
+    color: var(--shop-paper);
+    padding: 90px max(24px, calc((100vw - 1180px) / 2)) 110px;
+    text-align: left;
+    margin: 0;
+}
+
+#shop .shop-heading {
+    align-items: end;
+    display: grid;
+    gap: 8px 56px;
+    grid-template-columns: minmax(0, 1fr) minmax(280px, 0.65fr);
+    margin-bottom: 48px;
+}
+
+#shop .shop-eyebrow,
+#shop .product-type {
+    color: #ef7a62;
+    font-family: "Space Mono", monospace;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 0.14em;
+    margin: 0;
+    text-transform: uppercase;
+}
+
+#shop .shop-heading h2 {
+    color: var(--shop-paper);
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: clamp(48px, 7vw, 86px);
+    font-weight: 400;
+    grid-column: 1;
+    letter-spacing: -0.04em;
+    line-height: 0.95;
+    margin: 0;
+    padding: 0;
+}
+
+#shop .shop-heading > p:last-child {
+    color: #c9c3ba;
+    font-family: "Space Mono", monospace;
+    font-size: 14px;
+    grid-column: 2;
+    grid-row: 1 / span 2;
+    line-height: 1.8;
+    margin: 0 0 4px;
+}
+
+#shop .shop-grid {
+    display: grid;
+    gap: 24px;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+#shop .product-card {
+    background: var(--shop-paper);
+    border-radius: 2px;
+    color: var(--shop-ink);
+    display: flex;
+    flex-direction: column;
+    min-width: 0;
+    overflow: hidden;
+    transition: transform 220ms ease, box-shadow 220ms ease;
+}
+
+#shop .product-card:hover {
+    box-shadow: 0 24px 60px rgba(0, 0, 0, 0.3);
+    transform: translateY(-6px);
+}
+
+#shop .product-card > img {
+    aspect-ratio: 1;
+    display: block;
+    height: auto;
+    object-fit: cover;
+    width: 100%;
+}
+
+#shop .product-card-content {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    padding: 25px 25px 28px;
+}
+
+#shop .product-card h3 {
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 32px;
+    font-weight: 400;
+    letter-spacing: -0.025em;
+    margin: 8px 0 10px;
+}
+
+#shop .product-note {
+    color: #64605a;
+    font-family: Arial, sans-serif;
+    font-size: 15px;
+    line-height: 1.55;
+    margin: 0 0 24px;
+}
+
+#shop .buy-button {
+    align-items: center;
+    align-self: stretch;
+    background: var(--shop-ink);
+    color: white;
+    display: flex;
+    font-family: "Space Mono", monospace;
+    font-size: 13px;
+    font-weight: 700;
+    justify-content: space-between;
+    letter-spacing: 0.04em;
+    margin-top: auto;
+    padding: 15px 17px;
+    text-decoration: none;
+    transition: background-color 160ms ease, color 160ms ease;
+}
+
+#shop .buy-button:hover,
+#shop .buy-button:focus-visible {
+    background: var(--shop-accent);
+    color: white;
+}
+
+#shop .buy-button span {
+    font-size: 20px;
+    line-height: 1;
+    transition: transform 160ms ease;
+}
+
+#shop .buy-button:hover span {
+    transform: translateX(4px);
+}
+
+@media (max-width: 900px) {
+    #shop .shop-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+@media (max-width: 620px) {
+    #shop {
+        padding-bottom: 72px;
+        padding-top: 68px;
+    }
+
+    #shop .shop-heading {
+        display: block;
+        margin-bottom: 32px;
+    }
+
+    #shop .shop-heading h2 {
+        margin: 8px 0 22px;
+    }
+
+    #shop .shop-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+#about {
+    background-image: linear-gradient(
+            rgba(0, 0, 0, 0.5),
+            rgba(0, 0, 0, 0.5)
+        ),
+        url('images/the-evolution-of-acrylic-paint-into-modern-artists-acrylics-3240164.webp');
+    background-size: cover;
+    display: flow-root;
+    min-height: 600px;
+    margin: 0;
+}
+
+#about h2 {
+    color: white;
+}
+
+#about-text {
+    color: white;
+}
+
+/* Tablet and phone layout for the original site sections. */
+@media (max-width: 1000px) {
+    #gallery {
+        height: auto;
+        padding: 0 24px 72px;
+    }
+
+    .gallery-container {
+        display: grid;
+        gap: 56px 32px;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        height: auto;
+        max-width: 900px;
+        position: static;
+    }
+
+    .gallery-container > div,
+    .art-piece1,
+    .art-piece2,
+    .art-piece3,
+    .art-piece4 {
+        left: auto;
+        position: static;
+        right: auto;
+        top: auto;
+        width: auto;
+    }
+
+    #gallery img {
+        aspect-ratio: 4 / 5;
+        height: auto;
+        max-width: 460px;
+        width: 100%;
+    }
+
+    #about {
+        height: auto;
+        padding: 48px 24px 64px;
+    }
+
+    #about-text {
+        margin: 0 auto;
+        max-width: 900px;
+        width: 100%;
+    }
+}
+
+@media (max-width: 760px) {
+    header {
+        min-height: 150px;
+        padding: 38px 72px;
+    }
+
+    #face-image2 {
+        display: none;
+    }
+
+    #face-image {
+        height: 68px;
+        left: 24px;
+    }
+
+    #burger-menu {
+        right: 24px;
+    }
+
+    #home {
+        min-height: 560px;
+        font-size: clamp(21px, 4.5vw, 30px);
+    }
+
+    #home h2 {
+        padding: 28px 20px 10px;
+    }
+
+    .text-home {
+        padding: 20px 24px 36px;
+    }
+
+    #about-text {
+        font-size: clamp(21px, 4.5vw, 28px);
+    }
+}
+
+@media (max-width: 560px) {
+    header {
+        min-height: 128px;
+        padding: 30px 62px;
+    }
+
+    #face-image {
+        display: none;
+    }
+
+    #burger-menu {
+        right: 18px;
+    }
+
+    #burger-menu img {
+        height: 34px;
+    }
+
+    .dropdown.open {
+        font-size: 23px;
+    }
+
+    #gallery {
+        padding: 0 18px 60px;
+    }
+
+    .gallery-container {
+        gap: 48px;
+        grid-template-columns: 1fr;
+    }
+
+    #gallery p {
+        font-size: 17px;
+        line-height: 1.5;
+    }
+
+    #about {
+        min-height: 0;
+        padding: 36px 20px 52px;
+    }
+
+    #contact-text {
+        font-size: 20px;
+        overflow-wrap: anywhere;
+        padding: 0 20px;
+    }
+
+    #rights {
+        font-size: 14px;
+        overflow-wrap: anywhere;
+        padding: 18px;
+    }
+}

@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ruben's Drawings</title>
+    <script src="script.js" defer></script>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&family=Yuyu&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Imperial+Script&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <button id = 'burger-menu' type = 'button' aria-expanded = 'false' aria-controls = 'main-dropdown'>
+            <img src='images/white-menu.png' alt = 'menu'>
+        </button>
+        <img src='images/face-edited-final.png' id='face-image'>
+        <img src='images/face-edited-final.png' id='face-image2'>
+        <h1>Ruben's Artworks</h1>
+        <nav id = 'main-dropdown' class = 'dropdown'>
+            <p><a href = "#home">Home</a></p>
+            <p><a href = "#gallery">Gallery</a></p>
+            <p><a href = "#shop">Shop</a></p>
+            <p><a href = "#about">About</a></p>
+            <p><a href = "#contact">Contact</a></p>
+        </nav>
+    </header>
+    <main>
+        <section id="home">
+            <h2>Home</h2>
+            <div class = text-home>
+            <p>Welcome to Ruben's Artworks! Explore a collection of unique and creative artworks. Each piece is crafted with passion, attention to detail and a lot of thought. Every artwork has a own unique story to tell. Wether you are an art enthusiast or just looking for inspiration, you will find something that resonates with you. Enjoy browsing through the gallery and feel free to contact me if you want to buy any of the pieces.</p>
+            </div>
+        </section>
+        <section id="gallery">
+            <h2>Gallery</h2>
+            <div class="gallery-container">
+                <div class="art-piece1">
+                <h3>The Smiling Moon</h3>
+                <img src="images/forrmat.jpeg" alt="The Smiling Moon">
+                <h4>Description</h4>
+                <p>This art piece is about an old man standing in the wildernis. The old man waves at the moon and the moon is happy because he waves at him. This art piece is about the connection between humans and nature, and how even in solitude, we can find joy and companionship in the world around us.</p>
+                </div>
+                <div class ="art-piece2">
+                <h3>It Lurks</h3>
+                <img src="images/zebbra.jpeg" alt="It Lurks">
+                <h4>Description</h4>
+                <p>This art piece shows Zebra standing on a farm. He is watched by a lot of creepy beings and he doesn't realize it. This art piece shows that danger is always lurking and that always you need to be careful. Even when everytings seems good.</p>
+                </div>
+                <div class="art-piece3">
+                <h3>At My Limit</h3>
+                <img src="images/gezicht.jpeg" alt="At My Limit">
+                <h4>Description</h4>
+                <p>This art piece shows a picture of an old man who is tired. He is restless and has worked a lot. This shows that even when your old, life can be hard sometimes. It is hard to find rest in this time full of incentives and distractions. No matter your age.</p>
+                </div>
+                <div class="art-piece4">
+                <h3>Beyond Labels</h3>
+                <img src="images/WhatsApp Image 2026-07-17 at 11.34.36.jpeg" alt="Beyond Labels">
+                <h4>Description</h4>
+                <p>This art piece shows my vision of pigeon holding. You see a lot of different flowers. Each one represents a person. And you see one flower that stands out from the rest. He is different yet he is the happiest of them all. This reminds us that being different isn't something to hide, it's something to celebrate.</p>
+                </div>
+            </div>
+        </section>
+        <section id="shop">
+            <div class="shop-heading">
+                <p class="shop-eyebrow">Art you can live with</p>
+                <h2>Shop the collection</h2>
+                <p>Pick a product now and choose your favourite artwork on the next page.</p>
+            </div>
+            <div class="shop-grid">
+                <article class="product-card">
+                    <img src="images/shop/a3-poster.jpg" alt="A3 poster printed with The Smiling Moon artwork">
+                    <div class="product-card-content">
+                        <p class="product-type">Fine art print</p>
+                        <h3>A3 Poster</h3>
+                        <p class="product-note">Bold wall art in the largest available format.</p>
+                        <a href="checkout.html?product=a3-poster" class="buy-button">Buy Now <span aria-hidden="true">&rarr;</span></a>
+                    </div>
+                </article>
+                <article class="product-card">
+                    <img src="images/shop/fine-art-print.jpg" alt="Fine art print featuring The Smiling Moon artwork">
+                    <div class="product-card-content">
+                        <p class="product-type">Museum-quality print</p>
+                        <h3>Fine Art Print</h3>
+                        <p class="product-note">A framed giclée print made for a special place at home.</p>
+                        <a href="checkout.html?product=fine-art-print" class="buy-button">Buy Now <span aria-hidden="true">&rarr;</span></a>
+                    </div>
+                </article>
+                <article class="product-card">
+                    <img src="images/shop/a4-poster.jpg" alt="A4 poster printed with It Lurks artwork">
+                    <div class="product-card-content">
+                        <p class="product-type">Fine art print</p>
+                        <h3>A4 Poster</h3>
+                        <p class="product-note">A versatile format for a desk or gallery wall.</p>
+                        <a href="checkout.html?product=a4-poster" class="buy-button">Buy Now <span aria-hidden="true">&rarr;</span></a>
+                    </div>
+                </article>
+                <article class="product-card">
+                    <img src="images/shop/a5-poster.jpg" alt="A5 poster printed with At My Limit artwork">
+                    <div class="product-card-content">
+                        <p class="product-type">Fine art print</p>
+                        <h3>A5 Poster</h3>
+                        <p class="product-note">A compact art print for smaller spaces.</p>
+                        <a href="checkout.html?product=a5-poster" class="buy-button">Buy Now <span aria-hidden="true">&rarr;</span></a>
+                    </div>
+                </article>
+                <article class="product-card">
+                    <img src="images/shop/t-shirt.jpg" alt="T-shirt printed with It Lurks artwork">
+                    <div class="product-card-content">
+                        <p class="product-type">Wearable art</p>
+                        <h3>T-Shirt</h3>
+                        <p class="product-note">A relaxed cotton tee with your chosen artwork.</p>
+                        <a href="checkout.html?product=t-shirt" class="buy-button">Buy Now <span aria-hidden="true">&rarr;</span></a>
+                    </div>
+                </article>
+                <article class="product-card">
+                    <img src="images/shop/hoodie.jpg" alt="Hoodie printed with Beyond Labels artwork">
+                    <div class="product-card-content">
+                        <p class="product-type">Wearable art</p>
+                        <h3>Hoodie</h3>
+                        <p class="product-note">A cosy heavyweight hoodie with your chosen artwork.</p>
+                        <a href="checkout.html?product=hoodie" class="buy-button">Buy Now <span aria-hidden="true">&rarr;</span></a>
+                    </div>
+                </article>
+                <article class="product-card">
+                    <img src="images/shop/mug.jpg" alt="Mug printed with The Smiling Moon artwork">
+                    <div class="product-card-content">
+                        <p class="product-type">Everyday art</p>
+                        <h3>Mug</h3>
+                        <p class="product-note">A ceramic mug made personal with Ruben's art.</p>
+                        <a href="checkout.html?product=mug" class="buy-button">Buy Now <span aria-hidden="true">&rarr;</span></a>
+                    </div>
+                </article>
+                <article class="product-card">
+                    <img src="images/shop/fridge-magnet.jpg" alt="Fridge magnet printed with At My Limit artwork">
+                    <div class="product-card-content">
+                        <p class="product-type">Small art object</p>
+                        <h3>Fridge Magnet</h3>
+                        <p class="product-note">A small, glossy artwork for your fridge or magnetic board.</p>
+                        <a href="checkout.html?product=fridge-magnet" class="buy-button">Buy Now <span aria-hidden="true">&rarr;</span></a>
+                    </div>
+                </article>
+                <article class="product-card">
+                    <img src="images/shop/phone-case.jpg" alt="Phone case printed with At My Limit artwork">
+                    <div class="product-card-content">
+                        <p class="product-type">Everyday art</p>
+                        <h3>Phone Case</h3>
+                        <p class="product-note">Carry your favourite artwork wherever you go.</p>
+                        <a href="checkout.html?product=phone-case" class="buy-button">Buy Now <span aria-hidden="true">&rarr;</span></a>
+                    </div>
+                </article>
+            </div>
+        </section>
+        <section id="about">
+            <h2>About</h2>
+            <div id = "about-text">
+                <p>Hi! My name is Ruben and I am from the Netherlands. I create paintings using acrylic paint and enjoy working with bright colors and striking combinations. Painting and drawing is my way of being creative and bringing my ideas to life. I enjoy making art that radiates energy and makes people happy. I dont have a specific art style because i like to experiment. Every painting is made with care and passion, making each piece unique. Thank you for taking a look at my website. I hope you enjoy my art and perhaps find a painting that suits you.</p>
+            </div>
+        </section>
+        <section id="contact">
+            <h2>Contact me!</h2>
+            <div id = 'contact-text'>
+                <p>phone number: 0614688615</p>
+                <p>email:racslooijer@gmail.com</p>
+                <p>Instagram: https://www.instagram.com/ruben_s_artworks/</p>
+            </div>
+            <div id = 'rights'>
+                <p>© 2026 Ruben_s_drawings. All rights reserved. The artworks and images on this website may not be reproduced, distributed, published, or otherwise used without prior written permission, except as permitted by law.</p>
+                <p>Website designed by Daniel Jovanov</p>
+            </div>
+        </section>
+</body>
+</html>
