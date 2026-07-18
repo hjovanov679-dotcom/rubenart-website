@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Choose a Ruben_S_Drawings artwork and personalise your product before continuing to Shopify.">
+    <title>Personalise your order | Ruben's Drawings</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="checkout.css">
+    <script src="checkout.js" defer></script>
+</head>
+<body data-email-api-url="/api/send-confirmation">
+    <header class="checkout-header">
+        <a class="back-link" href="index.html#shop" aria-label="Back to the shop"><span aria-hidden="true">&larr;</span> Back to shop</a>
+        <a class="brand" href="index.html">Ruben's Drawings</a>
+        <span class="secure-note">Personalise first <span aria-hidden="true">&middot;</span> Pay with Shopify</span>
+    </header>
+
+    <main class="checkout-main">
+        <div class="checkout-intro">
+            <p class="eyebrow">Made for you</p>
+            <h1>Turn your favourite artwork into something personal.</h1>
+            <p>Choose the product, select one of Ruben's artworks and leave the details the artist needs. Payment and shipping information will be handled by email.</p>
+        </div>
+
+        <div class="checkout-layout">
+            <form id="order-form" class="order-form" novalidate>
+                <section class="form-section" aria-labelledby="product-heading">
+                    <div class="section-number">01</div>
+                    <div class="section-content">
+                        <h2 id="product-heading">Choose your product</h2>
+                        <p class="section-help">The item you clicked is already selected, but you can still change it.</p>
+                        <label for="product">Product <span aria-hidden="true">*</span></label>
+                        <select id="product" name="product" required>
+                            <option value="a3-poster">A3 Poster</option>
+                            <option value="a4-poster">A4 Poster</option>
+                            <option value="a5-poster">A5 Poster</option>
+                            <option value="fine-art-print">Fine Art Print</option>
+                            <option value="t-shirt">T-Shirt</option>
+                            <option value="hoodie">Hoodie</option>
+                            <option value="mug">Mug</option>
+                            <option value="phone-case">Phone Case</option>
+                            <option value="fridge-magnet">Fridge Magnet</option>
+                        </select>
+
+                        <div class="inline-fields">
+                            <div>
+                                <label for="quantity">Quantity <span aria-hidden="true">*</span></label>
+                                <input id="quantity" name="quantity" type="number" min="1" max="10" value="1" inputmode="numeric" required>
+                            </div>
+                            <div id="shirt-size-field" class="conditional-field" hidden>
+                                <label for="shirt-size">Clothing size <span aria-hidden="true">*</span></label>
+                                <select id="shirt-size" name="shirtSize">
+                                    <option value="">Choose a size</option>
+                                    <option value="XS">XS</option>
+                                    <option value="S">S</option>
+                                    <option value="M">M</option>
+                                    <option value="L">L</option>
+                                    <option value="XL">XL</option>
+                                    <option value="XXL">XXL</option>
+                                </select>
+                            </div>
+                            <div id="phone-model-field" class="conditional-field" hidden>
+                                <label for="phone-model">Phone brand &amp; model <span aria-hidden="true">*</span></label>
+                                <input id="phone-model" name="phoneModel" type="text" placeholder="e.g. iPhone 16 or Samsung S25">
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <section class="form-section" aria-labelledby="artwork-heading">
+                    <div class="section-number">02</div>
+                    <fieldset class="section-content artwork-fieldset">
+                        <legend id="artwork-heading">Choose your artwork</legend>
+                        <p class="section-help">Every artwork from the gallery is available for every product.</p>
+                        <div class="artwork-options">
+                            <label class="artwork-option">
+                                <input type="radio" name="artwork" value="The Smiling Moon" data-image="images/smiling-moon.jpeg" required>
+                                <span class="artwork-card">
+                                    <img src="images/forrmat.jpeg" alt="The Smiling Moon artwork">
+                                    <span><strong>The Smiling Moon</strong><small>Red, charcoal &amp; wonder</small></span>
+                                </span>
+                            </label>
+                            <label class="artwork-option">
+                                <input type="radio" name="artwork" value="It Lurks" data-image="images/zebra.jpeg" required>
+                                <span class="artwork-card">
+                                    <img src="images/zebbra.jpeg" alt="It Lurks artwork">
+                                    <span><strong>It Lurks</strong><small>Red, black &amp; alert</small></span>
+                                </span>
+                            </label>
+                            <label class="artwork-option">
+                                <input type="radio" name="artwork" value="At My Limit" data-image="images/oldman.jpeg" required>
+                                <span class="artwork-card">
+                                    <img src="images/gezicht.jpeg" alt="At My Limit artwork">
+                                    <span><strong>At My Limit</strong><small>Blue, quiet &amp; reflective</small></span>
+                                </span>
+                            </label>
+                            <label class="artwork-option">
+                                <input type="radio" name="artwork" value="Beyond Labels" data-image="images/beyond-labels.jpg" required>
+                                <span class="artwork-card">
+                                    <img src="images/WhatsApp Image 2026-07-17 at 11.34.36.jpeg" alt="Beyond Labels artwork">
+                                    <span><strong>Beyond Labels</strong><small>Colourful, bright &amp; celebratory</small></span>
+                                </span>
+                            </label>
+                        </div>
+                        <p class="field-error" id="artwork-error" aria-live="polite"></p>
+                    </fieldset>
+                </section>
+
+                <section class="form-section" aria-labelledby="details-heading">
+                    <div class="section-number">03</div>
+                    <div class="section-content">
+                        <h2 id="details-heading">Your details</h2>
+                        <p class="section-help">Ruben uses these details to confirm the artwork and contact you about your custom order.</p>
+                        <div class="inline-fields two-columns">
+                            <div>
+                                <label for="first-name">First name <span aria-hidden="true">*</span></label>
+                                <input id="first-name" name="firstName" type="text" autocomplete="given-name" required>
+                            </div>
+                            <div>
+                                <label for="last-name">Last name <span aria-hidden="true">*</span></label>
+                                <input id="last-name" name="lastName" type="text" autocomplete="family-name" required>
+                            </div>
+                        </div>
+                        <label for="email">Email address <span aria-hidden="true">*</span></label>
+                        <input id="email" name="email" type="email" autocomplete="email" placeholder="you@example.com" required>
+                        <p class="input-hint">The artist will send an order follow-up to this address.</p>
+ 
+                        <label for="address">Delivery address <span aria-hidden="true">*</span></label>
+                        <input id="address" name="address" type="text" autocomplete="street-address" placeholder="Your address" required>
+
+                        <label for="notes">Order note <span class="optional">Optional</span></label>
+                        <textarea id="notes" name="notes" rows="4" maxlength="500" placeholder="Anything Ruben should know about your print?"></textarea>
+
+                        <label class="consent-row">
+                            <input id="email-consent" name="emailConsent" type="checkbox" required>
+                            <span>I agree to that my address and my email adress may be sent to Ruben and other executives. You details will be kept safely and not be shared with other companies except as permitted by law.<span aria-hidden="true">*</span></span>
+                        </label>
+                    </div>
+                </section>
+            </form>
+
+            <aside class="order-summary" aria-labelledby="summary-heading">
+                <p class="eyebrow">Your selection</p>
+                <h2 id="summary-heading">Order summary</h2>
+                <div class="summary-product-image">
+                    <img id="summary-product-image" src="images/shop/a3-poster.jpg" alt="Selected product preview">
+                    <span id="summary-quantity">1×</span>
+                </div>
+                <dl>
+                    <div><dt>Product</dt><dd id="summary-product">A3 Poster</dd></div>
+                    <div><dt>Artwork</dt><dd id="summary-artwork">Not chosen yet</dd></div>
+                    <div id="summary-option-row" hidden><dt>Details</dt><dd id="summary-option"></dd></div>
+                    <div><dt>Price</dt><dd id="summary-price">€0.00</dd></div>
+                    <div><dt>Email</dt><dd id="summary-email">Not entered yet</dd></div>
+                </dl>
+                <button id="shopify-button" class="shopify-button" type="submit" form="order-form">
+                    <span class="button-label">Buy this artwork</span><span aria-hidden="true">&rarr;</span>
+                </button>
+                <p id="checkout-message" class="checkout-message" aria-live="polite"></p>
+                <p class="payment-note"><span aria-hidden="true">&#10003;</span> Ruben will send you an email to pay. After payment, he will send it to you.</p>
+            </aside>
+        </div>
+    </main>
+</body>
+</html>
