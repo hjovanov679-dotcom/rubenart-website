@@ -97,6 +97,7 @@ header > #main-dropdown.dropdown.open {
 
 .dropdown.open a {
     color: white;
+    padding: 20px;
 }
 
 header a {
