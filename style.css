@@ -76,15 +76,18 @@ header {
     display: none;
 }
 
-.dropdown.open {
+header > #main-dropdown.dropdown.open {
     position: absolute;
     top: 100%;
     left: 0;
     right: 0;
+    width: 100%;
+    box-sizing: border-box;
     z-index: 1000;
+
     display: block;
+    text-align: center;
     font-size: 30px;
-    color: black;
     background-color: #6495ed;
 }
 
