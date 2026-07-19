@@ -1,13 +1,13 @@
 const products = {
-    'a3-poster': { name: 'A3 Poster', image: 'images/shop/a3-poster.jpg', price: 25 },
-    'a4-poster': { name: 'A4 Poster', image: 'images/shop/a4-poster.jpg', price: 20 },
-    'a5-poster': { name: 'A5 Poster', image: 'images/shop/a5-poster.jpg', price: 15 },
-    'fine-art-print': { name: 'Fine Art Print', image: 'images/shop/fine-art-print.jpg', price: 30 },
-    't-shirt': { name: 'T-Shirt', image: 'images/shop/t-shirt.jpg', price: 25 },
-    'hoodie': { name: 'Hoodie', image: 'images/shop/hoodie.jpg', price: 40 },
-    'mug': { name: 'Mug', image: 'images/shop/mug.jpg', price: 15 },
-    'phone-case': { name: 'Phone Case', image: 'images/shop/phone-case.jpg', price: 20 },
-    'fridge-magnet': { name: 'Fridge Magnet', image: 'images/shop/fridge-magnet.jpg', price: 12 }
+    'a3-poster': { name: 'A3 Poster', image: 'images/shop/a3-poster.jpg', price: 24.99 },
+    'a4-poster': { name: 'A4 Poster', image: 'images/shop/a4-poster.jpg', price: 19.99 },
+    'a5-poster': { name: 'A5 Poster', image: 'images/shop/a5-poster.jpg', price: 14.99 },
+    'fine-art-print': { name: 'Fine Art Print', image: 'images/shop/fine-art-print.jpg', price: 29.99 },
+    't-shirt': { name: 'T-Shirt', image: 'images/shop/t-shirt.jpg', price: 24.99 },
+    'hoodie': { name: 'Hoodie', image: 'images/shop/hoodie.jpg', price: 39.99 },
+    'mug': { name: 'Mug', image: 'images/shop/mug.jpg', price: 14.99 },
+    'phone-case': { name: 'Phone Case', image: 'images/shop/phone-case.jpg', price: 19.99 },
+    'fridge-magnet': { name: 'Fridge Magnet', image: 'images/shop/fridge-magnet.jpg', price: 11.99 }
 };
 
 const form = document.querySelector('#order-form');
