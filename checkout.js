@@ -162,7 +162,7 @@ form.addEventListener('submit', async (event) => {
         }
 
         checkoutMessage.textContent = 'Bedankt! Het bevestigingsbericht is verstuurd.';
-        submitButtonlabel.textContent = 'Order Received';
+        submitButtonLabel.textContent = 'Order Received';
     } catch (error) {
         checkoutMessage.textContent = error.message || 'Er ging iets mis bij het versturen. Probeer het opnieuw.';
         submitButton.disabled = false;
