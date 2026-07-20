@@ -38,7 +38,7 @@ def send_confirmation():
     product = str(data.get("product", "")).strip()
     artwork = str(data.get("artwork", "")).strip()
     size = str(data.get("size", "")).strip()
-    quantity = str(date.get("quantity", "")).strip()
+    quantity = str(data.get("quantity", "")).strip()
     phone_model = str(data.get("phonemodel", "")).strip()
     order_notes = str(data.get("order_notes", "")).strip()
 
