@@ -38,6 +38,7 @@ def send_confirmation():
     product = str(data.get("product", "")).strip()
     artwork = str(data.get("artwork", "")).strip()
     size = str(data.get("size", "")).strip()
+    quantity = str(date.get("quantity", "")).strip()
     phone_model = str(data.get("phonemodel", "")).strip()
     order_notes = str(data.get("order_notes", "")).strip()
 
@@ -49,6 +50,7 @@ def send_confirmation():
     safe_size = escape(size)
     safe_phonemodel = escape(phone_model)
     safe_ordernotes = escape(order_notes)
+    safe_quantity = escape(quantity)
 
     if not email or "@" not in email:
         return jsonify({"message": "Vul een geldig e-mailadres in."}), 400
@@ -89,7 +91,7 @@ def send_confirmation():
                 <p>De naam van de klant is {recipient_name}</p>
                 <p>De email van de klant is {safe_email}</p>
                 <p>Het adress van de klant is {safe_address}</p>
-                <p>Het product dat de klant heeft besteld is {safe_product} met de artwork {safe_artwork} De prijzen kun je hieronder zien in de prijzenlijst.</p>
+                <p>Het product dat de klant heeft besteld is {safe_quantity} keer {safe_product} met de artwork {safe_artwork}. De prijzen kun je hieronder zien in de prijzenlijst.</p>
                 <p>Als de klant een T-Shirt heeft beseld zie je hier de size {safe_size}</p>
                 <p>Als de klant een telefoonhoes heeft besteld zie je hier de telefoonmodel van de klant {safe_phonemodel}</p>
                 <p>Als de klant order notes heeft achtergelaten zie je die hier {safe_ordernotes}</p>
