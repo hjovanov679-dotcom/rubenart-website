@@ -151,7 +151,8 @@ form.addEventListener('submit', async (event) => {
                 artwork: selectedArtwork.value,
                 phonemodel: phoneModelInput.value.trim(),
                 size: shirtSizeSelect.value,
-                order_notes: notesInput.value.trim()
+                order_notes: notesInput.value.trim(),
+                quantity: quantityInput.value.trim()
             })
         });
         const result = await response.json().catch(() => ({}));
