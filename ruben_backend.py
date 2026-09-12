@@ -12,7 +12,6 @@ app = Flask(__name__, static_folder=".", static_url_path="")
 
 @app.after_request
 def allow_configured_frontend(response):
-    """Allow a separately hosted frontend only when its origin is configured."""
     allowed_origin = os.getenv("ALLOWED_ORIGIN")
     if allowed_origin and request.headers.get("Origin") == allowed_origin:
         response.headers["Access-Control-Allow-Origin"] = allowed_origin
